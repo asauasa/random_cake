@@ -126,3 +126,16 @@ div#contents{
     position: relative;
     left: -50%;
 }
+.float{
+float:left;
+}
+.overflow{
+overflow:hidden;
+zoom:1;
+}
+.fa-star {
+    color:gold;
+}
+.fa-star-half-o {
+    color:gold;
+}
