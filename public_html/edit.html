@@ -1,9 +1,3 @@
-<!--
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -211,7 +205,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="but_4">
                         <div class="submit">
-                            <input type="submit" onclick="myFunction()" value="更新">
+                            <input type="button" id="updateButton" value="更新">
                         </div>	
                     </div>
                         <br>
@@ -221,5 +215,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div id="footer" class="copy">
             <p>&copy; 2016 <a href="http://www.sorich.jp/" target="_blank">SORICH.ltd</a></p>
         </div>
+        <script>
+            $(document).ready(function(){
+                $('#updateButton').click(function(){
+                    console.log(123);
+                    $('#background_opacyty').css('height', 20000);
+                    $('#background_opacyty').css('top', 0);
+                    $('#message').css('top', ($(window).height() + $(window).scrollTop()) / 2.5); 
+                    no_scroll();
+                    $('#background_opacyty').fadeIn("normal");
+                    $('#message').fadeIn("normal");
+                    setTimeout(function(){
+                        $('#background_opacyty').fadeOut("normal");
+                        $('#message').fadeOut("normal");
+                        return_scroll();
+                    }, 1500);
+                });
+                
+                //スクロール禁止用関数
+                function no_scroll(){
+                    //PC用
+                    var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+                    $(document).on(scroll_event,function(e){e.preventDefault();});
+                    //SP用
+                    $(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
+                }
+ 
+                function return_scroll(){
+                    //PC用
+                    var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+                    $(document).off(scroll_event);
+                    //SP用
+                    $(document).off('.noScroll');
+                }  
+            });
+        </script>
+        <div id="background_opacyty" style="display:none;top:0;background-color: #000;position: absolute;;width: 100%;opacity: 0.6">
+        
+            
+        </div>
+        <div id="message" style="display:none;font-size:20px;top:100px;left:0;width: 100%; height: 30px; padding:20px 0; z-index: 100; position:absolute;background-color: #F27141;text-align: center;font-family: Robot;font-weight: bold">更新しました</div>
+            
     </body>
 </html>
