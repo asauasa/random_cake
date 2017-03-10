@@ -52,7 +52,7 @@ class LunchController extends AppController
 		));
 		
 		$res = file_get_contents(TOKEN_URL, false, stream_context_create($options));
-var_dump(stream_context_create($options)); exit();
+var_dump($http_response_header); exit();
 		
 		
 		// レスポンス取得
