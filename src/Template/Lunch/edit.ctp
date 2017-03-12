@@ -44,7 +44,7 @@
                         <div class="clear"> </div>
                     </div>
                     
-    <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="//maps.google.com/maps/api/js?sensor=true&key=AIzaSyAKj3g2YL_4urC2ci56GTxmg9dfzfhaO9w"></script>
     <script src="js/gmaps.js"></script>
     <script>
         $(document).ready(function(){
