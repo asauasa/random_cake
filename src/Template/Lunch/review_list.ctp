@@ -13,13 +13,13 @@
 
                         <script>
             $("span.menu_2_left").click(function () {
-                window.location.href = 'top.html'
+                window.location.href = 'top'
             });
                         </script>
                         <ul class="menu_1_left_nav" style="z-index: 100">
-                            <li><a href="top.html">Top</a></li>
-                            <li><a href="edit.html">Profile</a></li>
-                            <li class="last_menu" style="z-index: 100"><a href="index.html">Logout</a></li>
+                            <li><a href="top">Top</a></li>
+                            <li><a href="edit">Profile</a></li>
+                            <li class="last_menu" style="z-index: 100"><a href="index">Logout</a></li>
                         </ul>
                     </div>
                     <!-- Menu-1 -->

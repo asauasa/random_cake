@@ -18,8 +18,8 @@
                                             });
                         </script>
                         <ul class="menu_1_left_nav" style="z-index: 100">
-                            <li><a href="top.html">Top</a></li>
-                            <li class="last_menu" style="z-index: 100"><a href="index.html">Logout</a></li>
+                            <li><a href="top">Top</a></li>
+                            <li class="last_menu" style="z-index: 100"><a href="index">Logout</a></li>
                         </ul>
                     </div>
                     <!-- Menu-1 -->
@@ -30,7 +30,7 @@
         
             <div id="contents">
                 あなたのプロフィールを入力してください
-                <form action="top.html">
+                <form action="top">
                     <div class="various-grid accout-login">
                         <label>ニックネーム</label>
                         <input type="text" class="ac-pass" value="ニックネームを入力する" onfocus="this.value = '';" onblur="if (this.value == '') {

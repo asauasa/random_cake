@@ -18,8 +18,8 @@
                                             });
                         </script>
                         <ul class="menu_1_left_nav" style="z-index: 100">
-                            <li style="z-index: 100"><a href="edit.html">Profile</a></li>
-                            <li class="last_menu" style="z-index: 100"><a href="index.html">Logout</a></li>
+                            <li style="z-index: 100"><a href="edit">Profile</a></li>
+                            <li class="last_menu" style="z-index: 100"><a href="index">Logout</a></li>
                         </ul>
                     </div>
                     <!-- Menu-1 -->
@@ -27,14 +27,14 @@
             </div>
             
         <div id="contents">
-            <a href="countdown.html" class="push_button_white">
+            <a href="countdown" class="push_button_white">
                 いつもの場所で<br>
                 ランダムランチ！
             </a>
             <br>
             <div style="">
                 
-            <a href="countdown.html" class="push_button push_button_red">
+            <a href="countdown" class="push_button push_button_red">
                 いまいる場所で<br>
                 ランダムランチ！
             </a>
@@ -43,8 +43,8 @@
             </div>
             <div class="list">
                 <ul>
-                    <li><input class="green-tag tag4" type="button" onclick="window.location.href='review.html'" style="width:160px;" value="レビューを書く"> </li>
-                    <li><input class="tag6" type="button" onclick="window.location.href='review_list.html'" style="width:160px;" value="ランチヒストリー"> </li>
+                    <li><input class="green-tag tag4" type="button" onclick="window.location.href='review'" style="width:160px;" value="レビューを書く"> </li>
+                    <li><input class="tag6" type="button" onclick="window.location.href='review_list'" style="width:160px;" value="ランチヒストリー"> </li>
                 </ul>
             </div>
             <br>

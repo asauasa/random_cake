@@ -19,7 +19,7 @@
         
             <div id="contents">
                 あなたのプロフィールを入力してください
-                <form action="top.html">
+                <form action="top">
                     <div class="various-grid accout-login">
                         <label>ニックネーム</label>
                         <input type="text" class="ac-pass" value="ニックネームを入力する" onfocus="this.value = '';" onblur="if (this.value == '') {

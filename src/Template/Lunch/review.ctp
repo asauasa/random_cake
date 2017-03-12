@@ -19,9 +19,9 @@
             });
                         </script>
                         <ul class="menu_1_left_nav" style="z-index: 100">
-                            <li><a href="top.html">Top</a></li>
-                            <li><a href="edit.html">Profile</a></li>
-                            <li class="last_menu" style="z-index: 100"><a href="index.html">Logout</a></li>
+                            <li><a href="top">Top</a></li>
+                            <li><a href="edit">Profile</a></li>
+                            <li class="last_menu" style="z-index: 100"><a href="index">Logout</a></li>
                         </ul>
                     </div>
                     <!-- Menu-1 -->
@@ -183,7 +183,7 @@
                         </div>
                     </div>  
 
-                <a style="margin-top: 10px;font-family: Roboto" href="top.html" class="push_button push_button_blue">
+                <a style="margin-top: 10px;font-family: Roboto" href="top" class="push_button push_button_blue">
                     レビュー登録
                 </a>
                 </div>  
