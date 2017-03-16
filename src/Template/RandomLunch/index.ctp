@@ -17,7 +17,7 @@
 <div id="contents">
     <div class="">
         <ul class="social1 social_top">
-            <li style="width:90%;margin:10px;" class="google"><a href="lunch/auth"> <i class="fa fa-google google1"> </i><h3>Googleでランダムランチを始める</h3>
+            <li style="width:90%;margin:10px;" class="google"><a href="auth"> <i class="fa fa-google google1"> </i><h3>Googleでランダムランチを始める</h3>
                     <div class="clear"> </div>
             </a></li>
         </ul>

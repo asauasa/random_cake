@@ -12,7 +12,7 @@ use Cake\Validation\Validator;
 
 class UserConfigsTable extends Table
 {
-    protected $tableName = 'UserConfigs';
+    protected $tableName = 'UserConfig';
     
 	public  function findUseConfigById($userId)
     {
@@ -20,7 +20,7 @@ class UserConfigsTable extends Table
         
         return $td
                 ->find()
-                ->where(['userId =' => $userId])
+                ->where(['user_id =' => $userId])
                 ->first();
                 
     }

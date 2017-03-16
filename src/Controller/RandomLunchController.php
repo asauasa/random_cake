@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Table\UsersTable;
+use App\Model\Table\UserConfigsTable;
 
 // アプリケーション設定
 define('CONSUMER_KEY', '140207808459-k86gsrq32r6olhg8bqduhkq6up91hgit.apps.googleusercontent.com');
@@ -51,9 +53,9 @@ class LunchController extends AppController
 			'content' => http_build_query($params)
 		));
 		
-		$res = file_get_contents(TOKEN_URL, false, stream_context_create($options));
-var_dump($http_response_header); exit();
+		var_dump($options); exit();
 		
+		$res = file_get_contents(TOKEN_URL, false, stream_context_create($options));
 		
 		// レスポンス取得
 		$token = json_decode($res, true);
@@ -71,36 +73,46 @@ var_dump($http_response_header); exit();
 		$res = file_get_contents(INFO_URL . '?' . http_build_query($user_params));
 		echo "<pre>" . print_r(json_decode($res, true), true) . "</pre>";
 	}
-    
-    public function countdown()
-    {
-        
-    }
-    
-    public function edit()
-    {
-        
-    }
-    
-    public function restraunt()
-    {
-        
-    }
-    
-    public function review()
-    {
-        
-    }
-    
-    public function reviewList()
-    {
-        
-    }
-    
-    public function top()
-    {
-        
-    }
+
+	public function countdown()
+	{
+
+	}
+
+	public function edit()
+	{
+		$userTable = new UsersTable();
+		
+		$user_data = $userTable->findByIdWithConfig(1);
+		
+		var_dump($user_data); exit();
+
+		//名前がまだ設定されていない場合は、
+		if ($user_data->name === "") {
+			$user_data->name = 'ニックネームを入力する';
+		}
+		$this->set('name', $user_data->name);
+	}
+
+	public function restraunt()
+	{
+
+	}
+
+	public function review()
+	{
+
+	}
+
+	public function reviewList()
+	{
+
+	}
+
+	public function top()
+	{
+
+	}
 	
 	
 }
