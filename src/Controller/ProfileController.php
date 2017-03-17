@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use Cake\ORM\TableRegistry;
+
 use App\Controller\AppController;
 use App\Model\Table\UsersTable;
 
@@ -15,9 +17,9 @@ class ProfileController extends AppController
 
 	public function edit()
 	{
-		$userTable = new UsersTable();
-		//■■■引数はユーザーID
-		$user_data = $userTable->findByIdWithConfig(1);
+//		$userTable = new UsersTable();
+//		//■■■引数はユーザーID
+//		$user_data = $userTable->findByIdWithConfig(1);
 		
 		//NULLの場合は、緯度に定数を代入
 		$centralLatitude = $user_data['centralLatitude'] ?? CENTRAL_LATITUDE;

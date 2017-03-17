@@ -14,12 +14,9 @@ use App\Model\Table\UserConfigsTable;
 
 class UsersTable extends Table
 {
-	public  function findByIdWithConfig(int $userId): array
+	public  function findTest()
 	{
-		$user =  TableRegistry::get('User');
-		
 		$result = $user->find()
-				->hydrate(false)
 				->join([
 					'table'	=> 'user_config',
 					'alias'		=> 'c',
@@ -37,7 +34,31 @@ class UsersTable extends Table
 				])
 				->where(['User.id =' => $userId])
 				->first();
+		return $result;
+	}
+	
+	
+	public  function findByIdWithConfig(int $userId): array
+	{
+		$user =  TableRegistry::get('User');
 		
+		$result = $user->find()
+				->join([
+					'table'	=> 'user_config',
+					'alias'		=> 'c',
+					'type'		=> 'LEFT',
+					'conditions'	=> 'c.user_id = User.id'
+				])
+				->select([
+					'id'				=> 'User.id',
+					'name'			=> 'User.name',
+					'mailaddress'		=> 'User.mailaddress',
+					'radius'			=> 'c.radius',
+					'centralLatitude'		=> 'c.central_latitude',
+					'centralLongitude'	=> 'c.central_longitude'
+				])
+				->where(['User.id =' => $userId])
+				->first();
 		return $result;
 	}
 }
