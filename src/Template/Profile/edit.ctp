@@ -152,7 +152,7 @@ $(document).ready(function(){
 		</div>
 <script>
 $(document).ready(function(){
-	$("#radius").val("val2");
+	$("#radius").val("<?= $radius;?>");
 })
 
 </script>
