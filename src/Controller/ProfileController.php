@@ -18,6 +18,12 @@ class ProfileController extends AppController
 		$user = TableRegistry::get('Users');
 		//■■■引数はユーザーID		
 		$user_data = $user->find('byIdWithConfig', ['id' => 0]);
+	
+		$con =  $user->UserConfigs->findByUserId(0)->first();
+		
+		
+		var_dump($con); exit();
+		
 		
 		//NULLの場合は、緯度に定数を代入
 		$centralLatitude = $user_data->centralLatitude ?? CENTRAL_LATITUDE;
@@ -28,6 +34,11 @@ class ProfileController extends AppController
 		$this->set('radius', $user_data->radius);
 		$this->set('centralLatitude', $centralLatitude);
 		$this->set('centralLongitude', $centralLongitude);
+	}
+	
+	public function edited()
+	{
+		$user = TableRegistry::get('Users');
 	}
 	
 	

@@ -14,6 +14,11 @@ use App\Model\Table\UserConfigsTable;
 
 class UsersTable extends Table
 {
+	public function initialize(array $config) {
+		
+	}
+	
+	
 	public  function findByIdWithConfig(Query $query, array $options)
 	{
 		return $this->find()

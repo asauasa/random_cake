@@ -28,7 +28,7 @@
 
 <div id="contents">
 	あなたのプロフィールを入力してください
-	<form action="top">
+	<form action="profile/edited" method="post">
 		<div class="various-grid accout-login">
 			<label>ニックネーム</label>
 			<input type="text" class="ac-pass" value="<?= $name; ?>" onfocus="this.value = '';" onblur="if (this.value == '') {
