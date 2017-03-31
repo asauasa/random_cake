@@ -12,16 +12,16 @@ use Cake\Validation\Validator;
 
 class UserConfigsTable extends Table
 {
-    protected $tableName = 'UserConfig';
-    
+	protected $tableName = 'UserConfigs';
+
 	public  function findUseConfigById($userId)
-    {
-        $td = TableRegistry::get($this->tableName);
-        
-        return $td
-                ->find()
-                ->where(['user_id =' => $userId])
-                ->first();
-                
-    }
+	{
+		$td = TableRegistry::get($this->tableName);
+
+		return $td
+				->find()
+				->where(['user_id =' => $userId])
+				->first();
+
+	}
 }

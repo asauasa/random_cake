@@ -28,10 +28,10 @@
 
 <div id="contents">
 	あなたのプロフィールを入力してください
-	<form action="profile/edited" method="post">
+	<form action="edited" method="post">
 		<div class="various-grid accout-login">
 			<label>ニックネーム</label>
-			<input type="text" class="ac-pass" value="<?= $name; ?>" onfocus="this.value = '';" onblur="if (this.value == '') {
+			<input type="text" class="ac-pass" name="name" value="<?= $name; ?>" onfocus="this.value = '';" onblur="if (this.value == '') {
 					this.value = '<?= $name; ?>';
 				}">
 		</div>
@@ -132,16 +132,16 @@ $(document).ready(function(){
 		<div class="input-box-grid-white-search">
 			<div class="input-box-grid-white-search1 accout-login">
 				<label style="font-family: Roboto">緯度</label>
-				<input type="text" id="lat" readonly="readonly">
+				<input type="text" name="lat" id="lat" readonly="readonly">
 			</div>
 			<div class="input-box-grid-white-search1 accout-login">
 				<label style="font-family: Roboto">経度</label>
-				<input type="text" id="lng" readonly="readonly">
+				<input type="text" name="lng" id="lng" readonly="readonly">
 			</div>
 			<div class="input-box-grid-white-search1 accout-login">
 			<label style="font-family: Roboto">お店の検索半径</label>
 
-			<select style="width: 67px; font-size: 19px; color: #9095AA; background-color: white; " path="radius" id="radius">
+			<select style="width: 67px; font-size: 19px; color: #9095AA; background-color: white; " path="radius" name="radius" id="radius">
 				<option value="300">300</option>    
 				<option value="500">500</option>
 				<option value="1000">1000</option>
@@ -159,7 +159,7 @@ $(document).ready(function(){
 		
 		<div class="but_4">
 			<div class="submit">
-				<input type="button" id="updateButton" value="更新">
+				<input type="submit" id="updateButton" value="更新">
 			</div>	
 		</div>
 			<br>

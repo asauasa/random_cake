@@ -14,8 +14,9 @@ use App\Model\Table\UserConfigsTable;
 
 class UsersTable extends Table
 {
-	public function initialize(array $config) {
-		
+	public function initialize(array $config) 
+	{
+		$this->hasOne('UserConfigs');
 	}
 	
 	
